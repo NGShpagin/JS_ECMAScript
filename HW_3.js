@@ -18,11 +18,11 @@ class Employee {
     }
 }
 
-class Manager {
+class Manager extends Employee {
     department;
 
     constructor(name, department) {
-        this.name = name;
+        super(name);
         this.department = department;
     }
 
@@ -30,8 +30,6 @@ class Manager {
         console.log(`Имя сотрудника: ${this.name}
         Департамент: ${this.department}`)
     }
-
-    __proto__ = Employee;
 }
 
 const employee = new Employee("John Smith");
